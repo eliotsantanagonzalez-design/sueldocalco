@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { COMMUNITIES_LIST } from '@/lib/engine/constants';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sueldocalco.es';
+  const baseUrl = 'https://www.sueldocalco.es';
   const currentDate = new Date();
 
   const communityRoutes: MetadataRoute.Sitemap = COMMUNITIES_LIST.map((c) => ({

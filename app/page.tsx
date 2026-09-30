@@ -7,12 +7,12 @@ import { COMMUNITIES_LIST } from '@/lib/engine/constants';
 export const metadata: Metadata = {
   title: 'Calculadora de Sueldo Neto y Nómina Online | SueldoCalco.es',
   description: 'Calcula tu salario neto mensual y anual exacto en España. Desglose detallado de retenciones de IRPF por tramos, cotizaciones a la Seguridad Social y MEI.',
-  metadataBase: new URL('https://sueldocalco.es'),
+  metadataBase: new URL('https://www.sueldocalco.es'),
   alternates: { canonical: '/' },
   openGraph: {
     title: 'Calculadora de Sueldo Neto y Nómina Online | SueldoCalco.es',
     description: 'Simula tu nómina en tiempo real: cálculo de bruto a neto, deducciones a la Seguridad Social, MEI y retención de IRPF.',
-    url: 'https://sueldocalco.es',
+    url: 'https://www.sueldocalco.es',
     siteName: 'SueldoCalco.es',
     locale: 'es_ES',
     type: 'website',
@@ -25,9 +25,9 @@ export default function HomePage() {
     '@graph': [
       {
         '@type': 'WebApplication',
-        '@id': 'https://sueldocalco.es/#app',
+        '@id': 'https://www.sueldocalco.es/#app',
         'name': 'Calculadora de Sueldo Neto SueldoCalco',
-        'url': 'https://sueldocalco.es',
+        'url': 'https://www.sueldocalco.es',
         'applicationCategory': 'FinanceApplication',
         'operatingSystem': 'All',
         'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'EUR' }
