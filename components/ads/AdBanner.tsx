@@ -38,6 +38,7 @@ export const AdBanner: React.FC<AdBannerProps> = ({
   className = '',
   testMode = process.env.NODE_ENV !== 'production'
 }) => {
+  return null;
   const adPushedRef = useRef(false);
   const dimensions = FORMAT_DIMENSIONS[format];
 
