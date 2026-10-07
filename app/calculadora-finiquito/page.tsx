@@ -3,7 +3,6 @@
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { calculateSeverance, DismissalType, SeveranceInput } from '@/lib/engine/severance';
-import { AdBanner } from '@/components/ads/AdBanner';
 
 export default function FiniquitoPage() {
   const [formData, setFormData] = useState<SeveranceInput>({
@@ -52,7 +51,6 @@ export default function FiniquitoPage() {
           </p>
         </header>
 
-        <AdBanner slotId="3322114455" format="horizontal-banner" />
 
         <section className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 space-y-6">
           <h2 className="text-xl font-bold text-slate-900">Datos de la Relación Laboral</h2>
@@ -147,7 +145,6 @@ export default function FiniquitoPage() {
           </div>
         </section>
 
-        <AdBanner slotId="8877665544" format="rectangle-card" />
 
         <section className="bg-slate-900 text-white rounded-2xl shadow-lg p-6 sm:p-8 space-y-6">
           <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-slate-800 gap-4">

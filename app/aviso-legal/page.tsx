@@ -18,7 +18,7 @@ export default function LegalNoticePage() {
         <p>
           Los resultados obtenidos en las calculadoras de SueldoCalco.es tienen carácter estrictamente orientativo e informativo y no constituyen asesoramiento jurídico, laboral o tributario vinculante.
         </p>
-      </section>
+      </section>      
     </main>
   );
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SalaryCalculator } from '@/components/calculators/SalaryCalculator';
-import { AdBanner } from '@/components/ads/AdBanner';
 import { COMMUNITIES_LIST } from '@/lib/engine/constants';
 
 export const metadata: Metadata = {
@@ -50,9 +49,6 @@ export default function HomePage() {
           Simula tu nómina en tiempo real: bruto a neto, cotizaciones a la Seguridad Social y retenciones de IRPF.
         </p>
       </div>
-
-      <AdBanner slotId="1029384756" format="horizontal-banner" />
-
       <SalaryCalculator />
 
       <section className="max-w-4xl mx-auto mt-12 bg-white rounded-2xl border border-slate-200 p-6 md:p-8 space-y-4">
@@ -72,23 +68,80 @@ export default function HomePage() {
         </div>
       </section>
 
-      <article className="max-w-4xl mx-auto mt-8 bg-white rounded-2xl border border-slate-200 p-6 md:p-8 space-y-6 text-slate-700 leading-relaxed text-sm">
-        <h2 className="text-xl font-bold text-slate-900">Preguntas Frecuentes sobre el Cálculo Salarial</h2>
-        <div className="space-y-4">
-          <div>
-            <h3 className="font-semibold text-slate-900 text-base">¿Cómo se calcula el salario neto a partir del bruto en España?</h3>
-            <p className="mt-1 text-slate-600">
-              El salario neto se obtiene restando al salario bruto anual las aportaciones del trabajador a la Seguridad Social (6,35% en contratos indefinidos o 6,40% en contratos temporales) y el porcentaje de retención del IRPF fijado por la Agencia Tributaria en función de tus rendimientos y situación familiar.
+      <section className="mt-16 border-t border-slate-200 pt-12 space-y-12 text-slate-800">
+          <article className="prose max-w-none space-y-6">
+            <h2 className="text-2xl font-bold text-slate-900">
+              Guía completa: Cómo interpretar y calcular tu nómina en España
+            </h2>
+            <p className="text-slate-600 leading-relaxed">
+              Comprender la diferencia exacta entre el salario bruto pactado y el sueldo neto que ingresas cada mes es fundamental para negociar condiciones laborales y planificar tu economía personal. En España, la brecha entre el salario bruto y el neto está compuesta principalmente por dos partidas obligatorias: las cotizaciones a la Seguridad Social a cargo del trabajador y las retenciones a cuenta del Impuesto sobre la Renta de las Personas Físicas (IRPF).
             </p>
-          </div>
-          <div>
-            <h3 className="font-semibold text-slate-900 text-base">¿Qué es el Mecanismo de Equidad Intergeneracional (MEI)?</h3>
-            <p className="mt-1 text-slate-600">
-              Es una cotización finalista aplicable en todas las nóminas para reforzar el Fondo de Reserva de la Seguridad Social, suponiendo una deducción del 0,70% a cargo del trabajador sobre su base de contingencias comunes.
-            </p>
-          </div>
-        </div>
-      </article>
-    </main>
+
+            <div className="grid md:grid-cols-2 gap-6 my-6">
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-5">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">1. Cotizaciones a la Seguridad Social</h3>
+                <p className="text-sm text-slate-600 mb-3">
+                  Son aportaciones obligatorias destinadas a financiar la cobertura sanitaria, pensiones de jubilación, prestaciones por desempleo y bajas médicas:
+                </p>
+                <ul className="text-sm space-y-1.5 text-slate-700 list-disc list-inside">
+                  <li><strong>Contingencias Comunes:</strong> 4,70% sobre la base de cotización.</li>
+                  <li><strong>Desempleo:</strong> 1,55% en contratos indefinidos (1,60% en temporales).</li>
+                  <li><strong>Formación Profesional:</strong> 0,10%.</li>
+                  <li><strong>Mecanismo de Equidad Intergeneracional (MEI):</strong> 0,70% aplicable para reforzar la hucha de las pensiones.</li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-5">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">2. Retenciones del IRPF</h3>
+                <p className="text-sm text-slate-600 mb-3">
+                  El IRPF es un impuesto progresivo estatal y autonómico. Las empresas retienen una cantidad mensual como anticipo de tu Declaración de la Renta anual:
+                </p>
+                <ul className="text-sm space-y-1.5 text-slate-700 list-disc list-inside">
+                  <li>Se calcula según tus ingresos anuales estimados y tu situación personal.</li>
+                  <li>El mínimo exento protege las rentas más bajas para que no sufran retención.</li>
+                  <li>Tener descendientes o ascendientes a cargo y el grado de discapacidad aumentan los mínimos desgravables.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article className="space-y-6">
+            <h2 className="text-2xl font-bold text-slate-900">
+              Preguntas Frecuentes sobre el Salario Neto y Nóminas
+            </h2>
+
+            <div className="space-y-4">
+              <div className="border border-slate-200 rounded-lg p-5 bg-white">
+                <h3 className="font-semibold text-slate-900 mb-2">¿Cómo influyen 12 o 14 pagas en el salario neto total?</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  El importe total anual que recibes es exactamente el mismo. Con 14 pagas, recibes una nómina mensual inferior durante el año más dos pagas extraordinarias (generalmente en verano y diciembre). Si eliges 12 pagas, las pagas extras se prorratean de manera uniforme cada mes. Las retenciones y cotizaciones anuales totales no varían por el número de pagas.
+                </p>
+              </div>
+
+              <div className="border border-slate-200 rounded-lg p-5 bg-white">
+                <h3 className="font-semibold text-slate-900 mb-2">¿Por qué cambia el IRPF si cambio de empresa a mitad de año?</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Cada empresa calcula el tipo de retención anual estimando que trabajarás con ellos durante todo el ejercicio. Al incorporarte a una nueva empresa a mitad de año, esta puede aplicar un IRPF reducido porque solo computa el dinero que ellos te pagarán en los meses restantes. Esto suele provocar que en la Declaración de la Renta debas abonar la diferencia a la Agencia Tributaria. Puedes solicitar por escrito a Recursos Humanos que te apliquen un porcentaje mayor de IRPF voluntario.
+                </p>
+              </div>
+
+              <div className="border border-slate-200 rounded-lg p-5 bg-white">
+                <h3 className="font-semibold text-slate-900 mb-2">¿Cuál es la diferencia entre la escala estatal y autonómica del IRPF?</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  El impuesto del IRPF en España está cedido en un 50% al Estado y en un 50% a la Comunidad Autónoma de residencia fiscal. Cada comunidad tiene potestad legislativa para regular sus propios tramos impositivos y deducciones por alquiler, nacimiento de hijos o guardería, lo que hace que dos trabajadores con idéntico sueldo bruto perciban un salario neto ligeramente distinto en Madrid, Cataluña o Andalucía.
+                </p>
+              </div>
+
+              <div className="border border-slate-200 rounded-lg p-5 bg-white">
+                <h3 className="font-semibold text-slate-900 mb-2">¿Qué es la base de cotización máxima a la Seguridad Social?</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Existe un tope salarial fijado anualmente por ley a partir del cual el salario bruto no cotiza a la Seguridad Social. Todos los ingresos por encima de dicha base máxima tributan íntegramente por IRPF, pero ya no sufren deducciones de cotización del 6,35% / 6,40%, fijando el límite superior de las futuras prestaciones y pensiones.
+                </p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+  </main>
   );
 }

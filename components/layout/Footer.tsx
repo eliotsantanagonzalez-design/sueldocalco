@@ -15,6 +15,9 @@ export const Footer = () => {
           <Link href="/cookies" className="hover:text-slate-900 transition-colors">
             Cookies
           </Link>
+          <Link href="/contacto" className="text-slate-500 hover:text-slate-800 transition-colors">
+            Contacto
+          </Link>
         </nav>
       </div>
     </footer>

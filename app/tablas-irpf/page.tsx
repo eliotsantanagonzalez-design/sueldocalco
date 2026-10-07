@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { AdBanner } from '@/components/ads/AdBanner';
 
 export const metadata = {
   title: 'Tablas de IRPF y Tramos de Retención de la Nómina | SueldoCalco.es',
@@ -24,7 +23,6 @@ export default function TablasIrpfPage() {
           </p>
         </header>
 
-        <AdBanner slotId="5544332211" format="horizontal-banner" />
 
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6">
           <h2 className="text-xl font-bold text-slate-900">Escala Estatal y Autonómica General</h2>
