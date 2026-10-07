@@ -4,7 +4,6 @@ import React, { useState, useMemo } from 'react';
 import { calculateSalary } from '@/lib/engine';
 import { COMMUNITIES_LIST } from '@/lib/engine/constants';
 import { FiscalInput, ContractType } from '@/lib/types';
-import { AdBanner } from '@/components/ads/AdBanner';
 import { ExportPdfButton } from '@/components/ui/ExportPdfButton';
 
 interface SalaryCalculatorProps {
