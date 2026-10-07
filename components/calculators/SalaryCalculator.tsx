@@ -180,8 +180,6 @@ export const SalaryCalculator: React.FC<SalaryCalculatorProps> = ({
         </div>
       </section>
 
-      <AdBanner slotId="8472910482" format="rectangle-card" />
-
       <section className="bg-slate-900 text-white rounded-2xl shadow-lg p-6 md:p-8 space-y-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-slate-800 gap-4">
           <div>
