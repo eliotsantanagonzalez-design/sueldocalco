@@ -54,32 +54,5 @@ export const AdBanner: React.FC<AdBannerProps> = ({
     }
   }, [slotId, testMode]);
 
-  return (
-    <aside
-      className={'mx-auto my-6 flex flex-col items-center justify-center ' + className}
-      aria-label="Contenido Publicitario"
-    >
-      <span className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1 select-none">
-        Publicidad
-      </span>
-      <div
-        className={'relative flex items-center justify-center bg-slate-50 border border-slate-200/60 rounded-md overflow-hidden ' + dimensions.minHeight + ' ' + dimensions.minWidth}
-      >
-        {testMode ? (
-          <div className="flex flex-col items-center justify-center p-4 text-center text-slate-400">
-            <span className="text-xs font-mono font-medium">[Espacio Publicitario Google Ads]</span>
-            <span className="text-[11px] text-slate-500 mt-1">Formato: {format} | Slot: {slotId}</span>
-          </div>
-        ) : (
-          <ins
-            className={'adsbygoogle ' + dimensions.styleClasses}
-            data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-0000000000000000'}
-            data-ad-slot={slotId}
-            data-ad-format={format === 'responsive' ? 'auto' : undefined}
-            data-full-width-responsive={format === 'responsive' ? 'true' : 'false'}
-          />
-        )}
-      </div>
-    </aside>
-  );
+  return null;
 };
