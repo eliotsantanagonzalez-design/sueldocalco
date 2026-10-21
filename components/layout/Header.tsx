@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { name: 'Sueldo Neto', href: '/' },
   { name: 'Calculadora Finiquito', href: '/calculadora-finiquito' },
   { name: 'Tablas IRPF', href: '/tablas-irpf' },
+  { name: 'Guía de Nómina', href: '/guia-nomina-irpf' },
 ];
 
 export const Header: React.FC = () => {
@@ -20,8 +21,8 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-white/90 backdrop-blur-md border-b border-slate-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 group">
             <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-600 text-white font-black text-base shadow-sm group-hover:bg-indigo-700 transition-colors">
@@ -33,16 +34,16 @@ export const Header: React.FC = () => {
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-1.5">
             {NAV_ITEMS.map((item) => {
               const active = isActive(item.href);
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={'px-3 py-2 rounded-lg text-sm font-semibold transition-colors ' + (
+                  className={'px-3.5 py-2 rounded-lg text-sm font-semibold transition-all ' + (
                     active
-                      ? 'bg-slate-100 text-indigo-600'
+                      ? 'bg-indigo-50 text-indigo-700 font-bold'
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                   )}
                 >
@@ -82,7 +83,7 @@ export const Header: React.FC = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={'block px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors ' + (
                   active
-                    ? 'bg-indigo-50 text-indigo-600'
+                    ? 'bg-indigo-50 text-indigo-600 font-bold'
                     : 'text-slate-700 hover:bg-slate-50'
                 )}
               >

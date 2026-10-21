@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://sueldocalco.es/sitemap.xml',
+    sitemap: 'https://www.sueldocalco.es/sitemap.xml',
   };
 }
